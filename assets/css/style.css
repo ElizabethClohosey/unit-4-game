@@ -1,3 +1,47 @@
 body {
     background: gray;
+    background-image: url();
 }
+
+header {
+    border: 1px solid green;
+}
+
+#how-to-play {
+    border: 1px solid black;
+}
+
+#random-number {
+    border: 1px solid orange;
+}
+
+#wins-losses {
+    border: 1px solid red;
+}
+
+#img-1, #img-2, #img-3, #img-4 {
+    border: 1px solid blue;
+    width: 75px;
+    height: 75px;
+}
+
+/* #img-2 {
+    border: 1px solid blue;
+}
+
+#img-3 {
+    border: 1px solid blue;
+}
+
+#img-4 {
+    border: 1px solid blue;
+} */
+
+#total-score-heading {
+    border: 1px solid blueviolet;
+}
+
+#score {
+    border: 1px solid white;
+}
+
