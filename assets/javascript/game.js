@@ -5,7 +5,8 @@
 var wins = 0;
 var losses = 0;
 var score = 0;
-// var numberToMatch = [];
+var numberToMatch = [];
+var imageCrystal = $("<img>");
 
 // variables to get element from html in order to log stats 
 var winsText = $('#wins');
@@ -22,7 +23,8 @@ var cpuChoice = [Math.floor(Math.random() * 102) + 19];
     console.log(cpuChoice);
 
 // variable to generate random number between 1 and 12 (for crystals)
-var crystalNumber = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+var crystalNumber = [Math.floor(Math.random() * 10) + 2];
+// var crystalNumber = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
     console.log(crystalNumber);
 
 // function crystalNumber () {
@@ -30,19 +32,23 @@ var crystalNumber = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "1
 // }
 
 function crystalClick() {
-    
+    var imgOne = $('#img-1');
 }
 
 $(document).ready(function(){
 
         // initiates game on crystal click 
-    $("img").click(function(){
-    
+    $('img').click(function(){
+        
         
       
 
 
 
+
+    
+    });
+});
 
     $(winsText).html("Wins: " + wins)
         // console.log(winsText);
@@ -52,9 +58,10 @@ $(document).ready(function(){
         // console.log(scoreText);
     $(numberToMatchText).html(cpuChoice);
         // console.log(numberToMatchText); not working in console but I get correct output
-    });
-});
 
+                        // Git Commit
+        // Created crystal random number and img variable for crystals
+                        
 
                          // Notes
 
@@ -74,3 +81,4 @@ $(document).ready(function(){
 
                         // To Do
 // check video to see if CPU number to reach is there when game starts or on crytal click 
+
