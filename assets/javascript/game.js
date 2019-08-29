@@ -6,43 +6,42 @@ var wins = 0;
 var losses = 0;
 var score = 0;
 var numberToMatch = [];
-var imageCrystal = $("<img>");
 
 // variables to get element from html in order to log stats 
 var winsText = $('#wins');
-    // console.log("wins text "+ winsText);
 var lossesText = $('#losses');
-    // console.log("losses text " + lossesText);
 var scoreText = $('#score');
-    // console.log(winsText);
 var numberToMatchText = $('#number-to-match');
-
+var crystalImage = $('#crystal-image');
 
 // variable to generate random number between 18 and 120
 var cpuChoice = [Math.floor(Math.random() * 102) + 19];
     console.log(cpuChoice);
 
 // variable to generate random number between 1 and 12 (for crystals)
-var crystalNumber = [Math.floor(Math.random() * 10) + 2];
-// var crystalNumber = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
-    console.log(crystalNumber);
+// var crystalNumber = [Math.floor(Math.random() * 10) + 2];
+var crystalNumber = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+    
+
+for (var i = 0; i < crystalNumber.length; i++) {
+
+    crystalImage.attr("data-crystalValue", crystalNumber[i]);
+    
+}console.log(crystalNumber);
 
 // function crystalNumber () {
 //     [Math.floor(Math.random() * 10) + 2];
 // }
 
-function crystalClick() {
-    var imgOne = $('#img-1');
-}
-
 $(document).ready(function(){
 
         // initiates game on crystal click 
-    $('img').click(function(){
+    $('.crystal-image').click(function() {
         
-        
-      
-
+        var crystalValue = ($(this).attr("data-crystalvalue"));
+        crystalValue = parseInt(crystalValue);
+        score += crystalValue;
+        console.log(score);
 
 
 
@@ -56,7 +55,7 @@ $(document).ready(function(){
         // console.log(lossesText);
     $(scoreText).html("Score: " + score);
         // console.log(scoreText);
-    $(numberToMatchText).html(cpuChoice);
+    $(numberToMatchText).html("Number to match: " + cpuChoice);
         // console.log(numberToMatchText); not working in console but I get correct output
 
                         // Git Commit
