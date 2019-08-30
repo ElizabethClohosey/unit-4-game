@@ -34,8 +34,13 @@ header {
     border: 1px solid red;
 }
 
-#img-1, #img-2, #img-3, #img-4 {
-    border: 1px solid white;
+#crystal-images {
+    margin-left: 15%;
+}
+
+#crystal-1, #crystal-2, #crystal-3, #crystal-4 {
+    border: 1px solid black;
+    padding-left: 5%;
     width: 75px;
     height: 75px;
 }

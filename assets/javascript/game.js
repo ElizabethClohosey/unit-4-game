@@ -20,14 +20,14 @@ var cpuChoice = [Math.floor(Math.random() * 102) + 19];
 
 // variable to generate random number between 1 and 12 (for crystals)
 // var crystalNumber = [Math.floor(Math.random() * 10) + 2];
-var crystalNumber = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
+var crystals = [Math.floor(Math.random() * 12)];
     
 
-for (var i = 0; i < crystalNumber.length; i++) {
+for (var i = 0; i < crystals.length; i++) {
 
-    crystalImage.attr("data-crystalValue", crystalNumber[i]);
+    crystalImage.attr("data-crystalValue", crystals[i]);
     
-}console.log(crystalNumber);
+}console.log(crystals);
 
 // function crystalNumber () {
 //     [Math.floor(Math.random() * 10) + 2];
