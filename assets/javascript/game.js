@@ -12,37 +12,46 @@ var winsText = $('#wins');
 var lossesText = $('#losses');
 var scoreText = $('#score');
 var numberToMatchText = $('#number-to-match');
-var crystalImage = $('#crystal-image');
+// var crystalImage = $('#crystal-image');
 
 // variable to generate random number between 18 and 120
 var cpuChoice = [Math.floor(Math.random() * 102) + 19];
     console.log(cpuChoice);
 
 // variable to generate random number between 1 and 12 (for crystals)
-// var crystalNumber = [Math.floor(Math.random() * 10) + 2];
-var crystals = [Math.floor(Math.random() * 12)];
+var crystals = [Math.floor(Math.random() * 10) + 2];
+    console.log(crystals);
+
+function reset() {
+    wins = 0;
+    losses = 0;
+    score = 0;
+    numberToMatch = [];
+    crystals = [Math.floor(Math.random() * 10) + 2];
+}
+
+function crystalNumbers() {
+
+}
     
 
-for (var i = 0; i < crystals.length; i++) {
+// for (var i = 0; i < crystals.length; i++) {
 
-    crystalImage.attr("data-crystalValue", crystals[i]);
+//     crystalImage.attr("data-crystalValue", crystals[i]);
     
-}console.log(crystals);
-
-// function crystalNumber () {
-//     [Math.floor(Math.random() * 10) + 2];
-// }
-
 $(document).ready(function(){
-
+    reset();
+    console.log(reset());
+    
         // initiates game on crystal click 
-    $('.crystal-image').click(function() {
+    $('.crystals').click(function() {
+            alert("Crystal clicked bitch");
         
-        var crystalValue = ($(this).attr("data-crystalvalue"));
-        crystalValue = parseInt(crystalValue);
-        score += crystalValue;
-        console.log(score);
-
+        // var crystalValue = ($(this).attr("data-crystalvalue"));
+        // crystalValue = parseInt(crystalValue);
+        // score += crystalValue;
+        // console.log(score);
+    
 
 
     
@@ -53,14 +62,13 @@ $(document).ready(function(){
         // console.log(winsText);
     $(lossesText).html("Losses: " + losses);
         // console.log(lossesText);
-    $(scoreText).html("Score: " + score);
+    $(scoreText).html("Total Snowflakes Collected: " + score);
         // console.log(scoreText);
-    $(numberToMatchText).html("Number to match: " + cpuChoice);
+    $(numberToMatchText).html("Snowflakes To Collect: " + cpuChoice);
         // console.log(numberToMatchText); not working in console but I get correct output
 
                         // Git Commit
-        // Created crystal random number and img variable for crystals
-                        
+    // crystals working onclick.  Made reset function - won't console log                         
 
                          // Notes
 
