@@ -7,7 +7,7 @@
 
 // var snowflake1 = randomNumber(12, 1)
 // console.log(snowflake1);
-// var snowflake2 = [Math.floor(Math.random() * 10) + 2];
+// var snowflake2 = Math.floor(Math.random() * 10) + 2];
 // console.log(snowflake2);
 // var snowflake3 = [Math.floor(Math.random() * 10) + 2];
 // console.log(snowflake3);
@@ -18,7 +18,7 @@
 var wins = 0;
 var losses = 0;
 var score = 0;
-var numberToMatch = [];
+var numberToMatch;
 
 // variables to get element from html in order to log stats 
 var winsText = $('#wins');
@@ -28,7 +28,7 @@ var numberToMatchText = $('#number-to-match');
 // var crystalImage = $('#crystal-image');
 
 // variable to generate random number between 18 and 120
-var cpuChoice = [Math.floor(Math.random() * 102) + 19];
+var cpuChoice = Math.floor(Math.random() * 120) + 1;
     console.log("CPU CHOICE " + cpuChoice);
 
 // variable to generate random number between 1 and 12 (for crystals)
