@@ -62,9 +62,10 @@ header {
 #snowflake-images {
     margin-left: 10%;
     margin-bottom: 4%;
+    
 }
 
-#snowflake-1, #snowflake-2, #snowflake-3, #snowflake-4 {
+img {
     /* border: 1px solid black; */
     margin-left: 4%;
     width: 90px;
