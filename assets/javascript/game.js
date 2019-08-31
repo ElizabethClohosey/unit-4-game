@@ -63,26 +63,23 @@ function reset() {
     wins = 0;
     losses = 0;
     score = 0;
-    numberToMatch = [];
-    // snowflakes = [Math.floor(Math.random() * 10) + 2];
-}console.log("RESET " + reset());
+    randomNumber();
+}
     
 
-// for (var i = 0; i < crystals.length; i++) {
+  renderImages();  
 
-//     crystalImage.attr("data-crystalValue", crystals[i]);
-    
 $(document).ready(function(){
     
-    renderImages();
+    
     
         // initiates game on crystal click 
     $('#snowflake-images').click(function() {
         reset();
-        renderImages();
-        console.log(reset());
-        renderImages();
-        alert("Crystal clicked");   
+        console.log("ON CLICK RESET " + reset());
+        randomNumber();
+        console.log(randomNumber());
+        alert("Snowflake clicked");   
         
     
 
