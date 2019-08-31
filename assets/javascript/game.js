@@ -2,10 +2,14 @@
 
 // ------------------GLOBAL VARIABLES----------------------
 // snowflake variables 
-var crystal1 = [Math.floor(Math.random() * 10) + 2];
-var crystal2 = [Math.floor(Math.random() * 10) + 2];
-var crystal3 = [Math.floor(Math.random() * 10) + 2];
-var crystal4 = [Math.floor(Math.random() * 10) + 2];
+var snowflake1 = [Math.floor(Math.random() * 10) + 2];
+console.log(snowflake1);
+var snowflake2 = [Math.floor(Math.random() * 10) + 2];
+console.log(snowflake2);
+var snowflake3 = [Math.floor(Math.random() * 10) + 2];
+console.log(snowflake3);
+var snowflake4 = [Math.floor(Math.random() * 10) + 2];
+console.log(snowflake4);
 
 // stat variables 
 var wins = 0;
@@ -33,12 +37,9 @@ function reset() {
     losses = 0;
     score = 0;
     numberToMatch = [];
-    crystals = [Math.floor(Math.random() * 10) + 2];
-}
-
-function crystalNumbers() {
-
-}
+    // snowflakes = [Math.floor(Math.random() * 10) + 2];
+    
+}console.log("RESET " + reset());
     
 
 // for (var i = 0; i < crystals.length; i++) {
@@ -52,14 +53,8 @@ $(document).ready(function(){
     $('.snowflakes').click(function() {
         reset();
         console.log(reset());
-        alert("Crystal clicked bitch");
-
-        $('#crystal-1').attr("value", crystal1);
+        alert("Crystal clicked");   
         
-        // var crystalValue = ($(this).attr("data-crystalvalue"));
-        // crystalValue = parseInt(crystalValue);
-        // score += crystalValue;
-        // console.log(score);
     
 
 
