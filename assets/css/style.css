@@ -1,5 +1,5 @@
 body {
-    background: black;
+    /* background: black; */
     background-image: url("https://cdn.pixabay.com/photo/2018/04/09/08/34/the-alps-3303447_960_720.jpg");
     /* background-repeat: no-repeat; */
     background-size: cover;
@@ -7,6 +7,8 @@ body {
 
 header {
     /* border: 1px solid yellow; */
+    color: #4e4c4c;
+    text-shadow: 5px 10px 15px white; 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 3em;
     text-align: center;
@@ -16,7 +18,7 @@ header {
 #game {
     /* border: 3px solid yellow; */
     width: 50%;
-    margin-left: 40%;
+    margin-left: 35%;
     padding: 2%;
 }
 
@@ -33,6 +35,8 @@ header {
 }
 
 #number-to-match {
+    color: #4e4c4c;
+    text-shadow: 5px 10px 15px white; 
     width: 47%;
     text-align: center;
     /* border: 1px solid orange; */
@@ -44,25 +48,28 @@ header {
 }
 
 #wins-losses-score {
+    color: #4e4c4c;
+    text-shadow: 5px 10px 15px white; 
     position: relative;
     /* border: 1px solid red; */
     padding: 2%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.25em;
     padding-left: 5%;
-    margin-bottom: 5%;
+    margin-bottom: 3%;
 }
 
 #snowflake-images {
     margin-left: 10%;
-    margin-bottom: 2%;
+    margin-bottom: 4%;
 }
 
 #snowflake-1, #snowflake-2, #snowflake-3, #snowflake-4 {
     /* border: 1px solid black; */
-    padding-left: 4%;
+    margin-left: 4%;
     width: 90px;
     height: 90px;
+    box-shadow: 5px 10px 18px #4e4c4c;
 }
 
 /* #img-2 {
@@ -89,10 +96,11 @@ header {
 }
 
 button {
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin-left: 28%;
     padding: .5%;
     background: linear-gradient(to right, rgb(147, 179, 247) , rgb(204, 117, 255));
     color: white;
+    box-shadow: 5px 10px 18px #4e4c4c;
 }
 

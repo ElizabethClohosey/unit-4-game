@@ -1,0 +1,22 @@
+body {
+    /* background: black; */
+    background-image: url("https://cdn.pixabay.com/photo/2018/04/09/08/34/the-alps-3303447_960_720.jpg");
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+}
+
+#how-to-play{
+    /* background-color: rgba(215, 215, 250, 0.63); */
+    line-height: .85em;
+    width: 70%;
+    margin-left: 30%;
+    text-align: left;
+    color: #4e4c4c;
+    text-shadow: 5px 10px 15px white; 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1em;
+}
+
+iframe {
+    margin-left: 48%;
+}
