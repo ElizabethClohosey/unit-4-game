@@ -1,7 +1,13 @@
-// alert("Testing Bitch");
 
 
+// ------------------GLOBAL VARIABLES----------------------
+// snowflake variables 
+var crystal1 = [Math.floor(Math.random() * 10) + 2];
+var crystal2 = [Math.floor(Math.random() * 10) + 2];
+var crystal3 = [Math.floor(Math.random() * 10) + 2];
+var crystal4 = [Math.floor(Math.random() * 10) + 2];
 
+// stat variables 
 var wins = 0;
 var losses = 0;
 var score = 0;
@@ -16,11 +22,11 @@ var numberToMatchText = $('#number-to-match');
 
 // variable to generate random number between 18 and 120
 var cpuChoice = [Math.floor(Math.random() * 102) + 19];
-    console.log(cpuChoice);
+    console.log("CPU CHOICE " + cpuChoice);
 
 // variable to generate random number between 1 and 12 (for crystals)
-var crystals = [Math.floor(Math.random() * 10) + 2];
-    console.log(crystals);
+// var crystals = [Math.floor(Math.random() * 10) + 2];
+    // console.log(crystals);
 
 function reset() {
     wins = 0;
@@ -40,12 +46,15 @@ function crystalNumbers() {
 //     crystalImage.attr("data-crystalValue", crystals[i]);
     
 $(document).ready(function(){
-    reset();
-    console.log(reset());
+    
     
         // initiates game on crystal click 
     $('.crystals').click(function() {
-            alert("Crystal clicked bitch");
+        reset();
+        console.log(reset());
+        alert("Crystal clicked bitch");
+
+        $('#crystal-1').attr("value", crystal1);
         
         // var crystalValue = ($(this).attr("data-crystalvalue"));
         // crystalValue = parseInt(crystalValue);

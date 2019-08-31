@@ -1,7 +1,8 @@
 body {
     background: black;
-    color: white;
-    background-image: url();
+    background-image: url("https://cdn.pixabay.com/photo/2018/04/09/08/34/the-alps-3303447_960_720.jpg");
+    /* background-repeat: no-repeat; */
+    background-size: cover;
 }
 
 header {
@@ -9,40 +10,58 @@ header {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 3em;
     text-align: center;
-    margin-bottom: 3%;
+    /* margin-bottom: 1%; */
 }
 
 #game {
-    border: 3px solid yellow;
-    width: 60%;
-    margin-left: 20%;
-    padding: 40px;
+    /* border: 3px solid yellow; */
+    width: 50%;
+    margin-left: 40%;
+    padding: 2%;
 }
 
 #how-to-play {
-    border: 1px solid white;
+    text-align: center;
+    color: white;
+    font-weight: 800;
+    background: rgba(51, 99, 255, 0.7);
+    /* opacity: 0.4; */
+    /* border: 1px solid white; */
     width: 50%;
+    margin-top: 2%;
+    margin-left: 45%;
+}
+
+#number-to-match {
+    width: 47%;
+    text-align: center;
+    /* border: 1px solid orange; */
+    margin-left: 25%;
+    margin-bottom: 3%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.35em;
     
 }
 
-#random-number {
-    border: 1px solid orange;
-    
+#wins-losses-score {
+    position: relative;
+    /* border: 1px solid red; */
+    padding: 2%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.25em;
+    padding-left: 7%;
+    margin-bottom: 5%;
 }
 
-#wins-losses {
-    border: 1px solid red;
-}
-
-#crystal-images {
+#snowflake-images {
     margin-left: 15%;
 }
 
-#crystal-1, #crystal-2, #crystal-3, #crystal-4 {
-    border: 1px solid black;
-    padding-left: 5%;
-    width: 75px;
-    height: 75px;
+#snowflake-1, #snowflake-2, #snowflake-3, #snowflake-4 {
+    /* border: 1px solid black; */
+    padding-left: 4%;
+    width: 90px;
+    height: 90px;
 }
 
 /* #img-2 {
@@ -62,6 +81,9 @@ header {
 } */
 
 #score {
-    border: 1px solid white;
+    /* border: 1px solid white; */
+    position: absolute;
+    right: 30px;
+    bottom: 20px;
 }
 
