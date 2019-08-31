@@ -49,12 +49,13 @@ header {
     padding: 2%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.25em;
-    padding-left: 7%;
+    padding-left: 5%;
     margin-bottom: 5%;
 }
 
 #snowflake-images {
-    margin-left: 15%;
+    margin-left: 10%;
+    margin-bottom: 2%;
 }
 
 #snowflake-1, #snowflake-2, #snowflake-3, #snowflake-4 {
@@ -85,5 +86,13 @@ header {
     position: absolute;
     right: 30px;
     bottom: 20px;
+}
+
+button {
+    border: 1px solid black;
+    margin-left: 28%;
+    padding: .5%;
+    background: linear-gradient(to right, rgb(147, 179, 247) , rgb(204, 117, 255));
+    color: white;
 }
 

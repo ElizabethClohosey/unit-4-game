@@ -49,7 +49,7 @@ $(document).ready(function(){
     
     
         // initiates game on crystal click 
-    $('.crystals').click(function() {
+    $('.snowflakes').click(function() {
         reset();
         console.log(reset());
         alert("Crystal clicked bitch");
@@ -89,12 +89,7 @@ $(document).ready(function(){
 // console.log(cpuChoice);  
 
 
-//  Alternative to generate random number between 18 and 120    
-// var max = 120;
-// var min = 19;
-// var cpuChoice = [Math.floor(Math.random() * (max - min + 1)) + min];
-// console.log(cpuChoice);
-
                         // To Do
-// check video to see if CPU number to reach is there when game starts or on crytal click 
-
+// style instructions page and add demo 
+// Make it snow 
+// Add timer 
