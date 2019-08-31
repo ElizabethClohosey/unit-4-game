@@ -38,7 +38,6 @@ function reset() {
     score = 0;
     numberToMatch = [];
     // snowflakes = [Math.floor(Math.random() * 10) + 2];
-    
 }console.log("RESET " + reset());
     
 
