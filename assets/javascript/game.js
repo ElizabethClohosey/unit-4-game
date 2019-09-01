@@ -1,18 +1,11 @@
-
-
+$(document).ready(function(){
+});
 // ------------------GLOBAL VARIABLES----------------------
 // snowflake variables 
-
-
-
-// var snowflake1 = randomNumber(12, 1)
-// console.log(snowflake1);
-// var snowflake2 = Math.floor(Math.random() * 10) + 2];
-// console.log(snowflake2);
-// var snowflake3 = [Math.floor(Math.random() * 10) + 2];
-// console.log(snowflake3);
-// var snowflake4 = [Math.floor(Math.random() * 10) + 2];
-// console.log(snowflake4);
+var snowflake1 = randomNumber(12, 1);
+var snowflake2 = randomNumber(12, 1);
+var snowflake3 = randomNumber(12, 1);
+var snowflake4 = randomNumber(12, 1);
 
 // stat variables 
 var wins = 0;
@@ -25,69 +18,76 @@ var winsText = $('#wins');
 var lossesText = $('#losses');
 var scoreText = $('#score');
 var numberToMatchText = $('#number-to-match');
-// var crystalImage = $('#crystal-image');
 
 // variable to generate random number between 18 and 120
 var cpuChoice = Math.floor(Math.random() * 120) + 1;
     console.log("CPU CHOICE " + cpuChoice);
 
-// variable to generate random number between 1 and 12 (for crystals)
-// var crystals = [Math.floor(Math.random() * 10) + 2];
-    // console.log(crystals);
-
-var state = {
-
-    imageSrcs : [
-    "https://media.npr.org/assets/img/2010/10/26/03_kiruna1_custom-5143d4c45be0c6a8da5f8ece7337b1d4efc177cd-s800-c15.jpg",
-    "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2009/1/6/1231252559400/Gallery-Snowflakes-A-Doub-003.jpg?width=700&quality=85&auto=format&fit=max&s=c99679139bc0ccd3e599bf6b78f02897",
-    "http://www.snowcrystals.com/designer/IMG_9634-A1.jpg",
-    "https://media.wnyc.org/i/800/0/c/85/photologue/images/79/snowflake_tout.jpg"
-    ]
-
-}
-
-function renderImages() {
-    state.imageSrcs.forEach(function(src, index) {
-        var imageHtml = `
-        <img id="snowFlake-${index + 1}" alt="" src="${src}" number=${randomNumber(12, 1)} />`;
-        $('#snowflake-images').append(imageHtml);
-    })
-}
-
-
 function randomNumber(range, bound) {
     return Math.floor(Math.random() * range) + bound;
-} console.log(randomNumber());
-
-function reset() {
-    wins = 0;
-    losses = 0;
-    score = 0;
-    randomNumber();
 }
-    
+ 
+function gameReset() {
+    wins = 0;
+    // console.log("GAME RESET WINS " + wins)
+    losses = 0;
+    // console.log("GAME LOSSES RESET " + losses);
+    score = 0;
+    // console.log("GAME SCORE RESET " + score);
+    cpuChoice = Math.floor(Math.random() * 120) + 1;
+    // console.log("CPU CHOICE " + cpuChoice);
+    snowflake1 = randomNumber(12, 1);
+    // console.log("GAME RESET SF 1 " + snowflake1);
+    snowflake2 = randomNumber(12, 1);
+    // console.log("GAME RESET SF 2 " + snowflake2);
+    snowflake3 = randomNumber(12, 1);
+    // console.log("GAME RESET SF 3 " + snowflake3);
+    snowflake4 = randomNumber(12, 1);
+    // console.log("GAME RESET SF 4 " + snowflake4);
+}
 
-  renderImages();  
+function winsLossesReset () {
+    score = 0;
+    console.log("WINS/LOSSES RESET " + losses)
+    cpuChoice = Math.floor(Math.random() * 120) + 1;
+    // console.log("WINS/LOSSES RESET CPU CHOICE " + cpuChoice);
+    snowflake1 = randomNumber(12, 1);
+    // console.log("WINS/LOSSES RESET SF 1 " + snowflake1);
+    snowflake2 = randomNumber(12, 1);
+    // console.log("WINS/LOSSES RESET SF 2 " + snowflake2);
+    snowflake3 = randomNumber(12, 1);
+    // console.log("WINS/LOSSES RESET SF 3 " + snowflake3);
+    snowflake4 = randomNumber(12, 1);
+    // console.log("WINS/LOSSES RESET SF 4 " + snowflake4);
+}
 
-$(document).ready(function(){
-    
-    
-    
-        // initiates game on crystal click 
-    $('#snowflake-images').click(function() {
-        reset();
-        console.log("ON CLICK RESET " + reset());
-        randomNumber();
-        console.log(randomNumber());
-        alert("Snowflake clicked");   
-        
-    
-
-
-    
+// Initiates game on any snowflake click 
+    $('#snowflake-1').click(function() {
+        console.log("SF ONE ON CLICK " + snowflake1);
+        // $(snowflake1).prepend(score);
     });
-});
 
+    $('#snowflake-2').click(function() {
+        console.log("SF TWO ON CLICK " + snowflake2);
+    });
+
+    $('#snowflake-3').click(function() {
+        console.log("SF THREE ON CLICK " + snowflake3);
+    });
+
+    $('#snowflake-4').click(function() {
+        console.log("SF FOUR ON CLICK " + snowflake4);
+    });
+
+    if (numberToMatch === score) {
+        wins++
+        winsLossesReset();
+    } else if (score > numberToMatch) {
+        losses++
+        winsLossesReset();
+    }
+
+    
     $(winsText).html("Wins: " + wins)
         // console.log(winsText);
     $(lossesText).html("Losses: " + losses);
@@ -115,3 +115,25 @@ $(document).ready(function(){
 // Make it snow 
 // Add timer 
 
+// function renderImages() {
+//     state.imageSrcs.forEach(function(src, index) {
+//         var imageHtml = `
+//         <img id="snowFlake-${index + 1}" alt="" src="${src}" number=${randomNumber(12, 1)} />`;
+//         $('#snowflake-images').append(imageHtml);
+//     })
+// }console.log("IMAGE RENDERING " + renderImages());
+
+// variable to generate random number between 1 and 12 (for crystals)
+// var crystals = [Math.floor(Math.random() * 10) + 2];
+    // console.log(crystals);
+
+// var state = {
+
+//     imageSrcs : [
+//     "https://media.npr.org/assets/img/2010/10/26/03_kiruna1_custom-5143d4c45be0c6a8da5f8ece7337b1d4efc177cd-s800-c15.jpg",
+//     "https://i.guim.co.uk/img/static/sys-images/Guardian/Pix/pictures/2009/1/6/1231252559400/Gallery-Snowflakes-A-Doub-003.jpg?width=700&quality=85&auto=format&fit=max&s=c99679139bc0ccd3e599bf6b78f02897",
+//     "http://www.snowcrystals.com/designer/IMG_9634-A1.jpg",
+//     "https://media.wnyc.org/i/800/0/c/85/photologue/images/79/snowflake_tout.jpg"
+//     ]
+
+// }
