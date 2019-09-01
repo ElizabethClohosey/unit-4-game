@@ -5,18 +5,29 @@ body {
     background-size: cover;
 }
 
-#how-to-play{
-    /* background-color: rgba(215, 215, 250, 0.63); */
-    line-height: .85em;
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    width: 50%;
+    font-size: 1.75em;
+    margin: 1% 0% 1% 40%;
+    text-shadow: 5px 10px 20px white; 
+}
+
+#how-to-play {
+    margin-bottom: 1%;
+    text-align: center;
+    line-height: 1.55em;
     width: 70%;
-    margin-left: 30%;
-    text-align: left;
+    margin-left: 27%;
     color: #4e4c4c;
-    text-shadow: 5px 10px 15px white; 
+    text-shadow: 5px 5px 15px white; 
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1em;
 }
 
 iframe {
-    margin-left: 48%;
+    height: 200px;
+    width: 400px;
+    margin-left: 45%;
+    border: 1px solid black;
 }
