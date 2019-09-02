@@ -3,9 +3,13 @@
 // ------------------GLOBAL VARIABLES----------------------
 // snowflake variables 
 var snowflake1 = randomNumber(12, 1);
+console.log("SF 1 " + snowflake1);
 var snowflake2 = randomNumber(12, 1);
+console.log("SF 2 " + snowflake2);
 var snowflake3 = randomNumber(12, 1);
+console.log("SF 3 " + snowflake3);
 var snowflake4 = randomNumber(12, 1);
+console.log("SF 4 " + snowflake4);
 
 // stat variables 
 var wins = 0;
@@ -27,12 +31,17 @@ function randomNumber(range, bound) {
 function reset () {
     score = 0;
     cpuChoice = Math.floor(Math.random() * 120) + 1;
+    console.log("RESET CPU CHOICE " + cpuChoice);
     $("#number-to-match").html("Snowflakes To Collect: " + cpuChoice);
     $("#score").html("Total Snowflakes Collected: " + score);
     snowflake1 = randomNumber(12, 1);
+    console.log("RESET SF1 " + snowflake1);
     snowflake2 = randomNumber(12, 1);
+    console.log("RESET SF2 " + snowflake2);
     snowflake3 = randomNumber(12, 1);
+    console.log("RESET SF2 " + snowflake3);
     snowflake4 = randomNumber(12, 1);
+    console.log("RESET SF4 " + snowflake4);
 }
 
     function gameCheck () {
@@ -50,7 +59,6 @@ function reset () {
     } 
 
     function start () {
-        reset();
         wins = 0;
         losses = 0;
         $("#wins").html("Wins: " + wins);
@@ -62,10 +70,10 @@ function reset () {
     $(document).ready(function(){
 
 // Initiates game on any snowflake click and chooses random number to match
-start();
+// start();
 
     $('#snowflake-1').click(function() {
-        console.log("SF ONE ON CLICK " + snowflake1);
+        // console.log("SF ONE ON CLICK " + snowflake1);
         score += snowflake1;
         $("#score").html("Total Snowflakes Collected: " + score);
         gameCheck();
@@ -73,29 +81,33 @@ start();
     });
 
     $('#snowflake-2').click(function() {
-        console.log("SF TWO ON CLICK " + snowflake2);
+        // console.log("SF TWO ON CLICK " + snowflake2);
         score += snowflake2;
         $("#score").html("Total Snowflakes Collected: " + score);
         gameCheck();
     });
 
     $('#snowflake-3').click(function() {
-        console.log("SF THREE ON CLICK " + snowflake3);
+        // console.log("SF THREE ON CLICK " + snowflake3);
         score += snowflake3;
         $("#score").html("Total Snowflakes Collected: " + score);
         gameCheck();
     });
 
     $('#snowflake-4').click(function() {
-        console.log("SF FOUR ON CLICK " + snowflake4);
+        // console.log("SF FOUR ON CLICK " + snowflake4);
         score += snowflake4;
         $("#score").html("Total Snowflakes Collected: " + score);
         gameCheck();
     });
+
+    start();
+
 });
 
-                         // Notes
 
+                         // Notes
+// Shorten code 
 // Function variable to generate random Number between 19 and 120 
 // *****Should I use this or a global variable?***** 
 // var cpuChoice = function() {
