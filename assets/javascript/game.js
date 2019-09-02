@@ -21,6 +21,8 @@ var numberToMatch;
 var cpuChoice = Math.floor(Math.random() * 120) + 1;
     console.log("CPU CHOICE " + cpuChoice);
 
+ 
+
 // variable to generate random number between 1 and 12 for Total Snowflakes Collected 
 function randomNumber(range, bound) {
     return Math.floor(Math.random() * range) + bound;
@@ -57,6 +59,33 @@ function reset () {
             reset();
         }
     } 
+    
+                        // TIMER
+// --------------------------------------------------------------- 
+// timer variables 
+// var number = 60;
+// var intervalId;   
+
+// function runTimer() {
+//     clearInterval(intervalId);
+//     intervalID = setInterval(decrement, 1000);
+// }
+
+// function decrement() {
+//     number--;
+//     $("#timer").html(number);
+//     if (number === 0) {
+//         stop();
+//         alert("TIME IS UP");
+//     }
+// }
+
+// function stop () {
+//     clearInterval(intervalID);
+// }
+                        // end timer 
+// ------------------------------------------------------------
+
 
     function start () {
         wins = 0;
@@ -69,9 +98,15 @@ function reset () {
 
     $(document).ready(function(){
 
+        // starts timer on snowflake click - has bug 
+    // $("#snowflake-images").click(function() {
+    //     runTimer();
+    //     console.log(runTimer());
+    // });
+
+
 // Initiates game on any snowflake click and chooses random number to match
 // start();
-
     $('#snowflake-1').click(function() {
         // console.log("SF ONE ON CLICK " + snowflake1);
         score += snowflake1;
@@ -105,19 +140,8 @@ function reset () {
 
 });
 
-
-                         // Notes
-// Shorten code 
-// Function variable to generate random Number between 19 and 120 
-// *****Should I use this or a global variable?***** 
-// var cpuChoice = function() {
-//     cpuChoice = [Math.floor(Math.random() * 102) + 19];
-// }
-// console.log(cpuChoice);  
-
-
                         // To Do
-
+// shorten code 
 // make responsive on smaller screen 
 // make object for snowflake 1-4 variables 
 // add timer 
