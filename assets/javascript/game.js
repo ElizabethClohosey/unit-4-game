@@ -13,12 +13,6 @@ var losses = 0;
 var score = 0;
 var numberToMatch;
 
-// variables to get element from html in order to log stats 
-// var winsText = $('#wins');
-// var lossesText = $('#losses');
-// var scoreText = $('#score');
-// var numberToMatchText = $('#number-to-match');
-
 // variable to generate random number between 18 and 120
 var cpuChoice = Math.floor(Math.random() * 120) + 1;
     console.log("CPU CHOICE " + cpuChoice);
@@ -27,60 +21,52 @@ function randomNumber(range, bound) {
     return Math.floor(Math.random() * range) + bound;
 }
 
-function gameReset () {
-    wins = 0;
-    // console.log("GAME RESET WINS " + wins)
-    losses = 0;
-    // console.log("GAME LOSSES RESET " + losses);
-    winsLossesReset();
-    // score = 0;
-    // // console.log("GAME SCORE RESET " + score);
-    // cpuChoice = Math.floor(Math.random() * 120) + 1;
-    // // console.log("CPU CHOICE " + cpuChoice);
-    // snowflake1 = randomNumber(12, 1);
-    // // console.log("GAME RESET SF 1 " + snowflake1);
-    // snowflake2 = randomNumber(12, 1);
-    // // console.log("GAME RESET SF 2 " + snowflake2);
-    // snowflake3 = randomNumber(12, 1);
-    // // console.log("GAME RESET SF 3 " + snowflake3);
-    // snowflake4 = randomNumber(12, 1);
-    // // console.log("GAME RESET SF 4 " + snowflake4);
-}
-
-function winsLossesReset () {
+function reset () {
     score = 0;
-    console.log("WINS/LOSSES RESET " + losses)
+    console.log("RESET LOSSES " + losses)
     cpuChoice = Math.floor(Math.random() * 120) + 1;
-    // console.log("WINS/LOSSES RESET CPU CHOICE " + cpuChoice);
+    $("#number-to-match").html("Snowflakes To Collect: " + cpuChoice);
+    console.log("RESET CPU CHOICE " + cpuChoice);
+    $("#score").html("Total Snowflakes Collected: " + score);
     snowflake1 = randomNumber(12, 1);
-    // console.log("WINS/LOSSES RESET SF 1 " + snowflake1);
+    console.log("RESET SF 1 " + snowflake1);
     snowflake2 = randomNumber(12, 1);
-    // console.log("WINS/LOSSES RESET SF 2 " + snowflake2);
+    console.log("RESET SF 2 " + snowflake2);
     snowflake3 = randomNumber(12, 1);
-    // console.log("WINS/LOSSES RESET SF 3 " + snowflake3);
+    console.log("RESET SF 3 " + snowflake3);
     snowflake4 = randomNumber(12, 1);
-    // console.log("WINS/LOSSES RESET SF 4 " + snowflake4);
+    console.log("RESET SF 4 " + snowflake4);
 }
 
     function gameCheck () {
-        if (numberToMatch === score) {
-            wins++
-            winsLossesReset();
-        } 
-     }   
-        
-        // else if (score > numberToMatch) {
-        //     losses++
-        //     winsLossesReset();
-        // }
-    
+        if (cpuChoice === score) {
+            wins++;
+            $("#wins").html("Wins: " + wins);
+            alert("YOU WON");
+            reset();
+        } else if (score > cpuChoice) {
+            losses++
+            $("#losses").html("Losses: " + losses);
+            alert("YOU LOST");
+            reset();
+        }
+    } 
 
     function start () {
-        
+        reset();
+        wins = 0;
+        losses = 0;
+        $("#wins").html("Wins: " + wins);
+        $("#losses").html("Losses: " + losses);
+        $("#number-to-match").html("Snowflakes To Collect: " + cpuChoice);
+        $("#score").html("Total Snowflakes Collected: " + score);
     }
-$(document).ready(function(){
 
-// Initiates game on any snowflake click 
+    $(document).ready(function(){
+
+// Initiates game on any snowflake click and chooses random number to match
+start();
+
     $('#snowflake-1').click(function() {
         console.log("SF ONE ON CLICK " + snowflake1);
         score += snowflake1;
@@ -109,21 +95,7 @@ $(document).ready(function(){
         $("#score").html("Total Snowflakes Collected: " + score);
         gameCheck();
     });
-
-    
-
-    
-    $("#wins").html("Wins: " + wins)
-        // console.log(winsText);
-    $("#losses").html("Losses: " + losses);
-        // console.log(lossesText);
-    $("#score").html("Total Snowflakes Collected: " + score);
-        // console.log(scoreText);
-    $("#number-to-match").html("Snowflakes To Collect: " + cpuChoice);
-        // console.log(numberToMatchText); not working in console but I get correct output
 });
-                        // Git Commit
-    // crystals working onclick.  Made reset function - console logs as undefined                      
 
                          // Notes
 
