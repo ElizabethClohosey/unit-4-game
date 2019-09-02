@@ -13,29 +13,26 @@ var losses = 0;
 var score = 0;
 var numberToMatch;
 
-// variable to generate random number between 18 and 120
+// variable to generate random number between 18 and 120 for Total Snowflakes To Collect 
 var cpuChoice = Math.floor(Math.random() * 120) + 1;
     console.log("CPU CHOICE " + cpuChoice);
 
+// variable to generate random number between 1 and 12 for Total Snowflakes Collected 
 function randomNumber(range, bound) {
     return Math.floor(Math.random() * range) + bound;
 }
+// Another way to acheive this 
+// var crystals = [Math.floor(Math.random() * 10) + 2];
 
 function reset () {
     score = 0;
-    console.log("RESET LOSSES " + losses)
     cpuChoice = Math.floor(Math.random() * 120) + 1;
     $("#number-to-match").html("Snowflakes To Collect: " + cpuChoice);
-    console.log("RESET CPU CHOICE " + cpuChoice);
     $("#score").html("Total Snowflakes Collected: " + score);
     snowflake1 = randomNumber(12, 1);
-    console.log("RESET SF 1 " + snowflake1);
     snowflake2 = randomNumber(12, 1);
-    console.log("RESET SF 2 " + snowflake2);
     snowflake3 = randomNumber(12, 1);
-    console.log("RESET SF 3 " + snowflake3);
     snowflake4 = randomNumber(12, 1);
-    console.log("RESET SF 4 " + snowflake4);
 }
 
     function gameCheck () {
@@ -108,22 +105,23 @@ start();
 
 
                         // To Do
-// style instructions page and add demo 
-// Make it snow 
-// Add timer 
 
+// make responsive on smaller screen 
+// make object for snowflake 1-4 variables 
+// add timer 
+// change instructions after time is added 
+// Make it snow 
+
+                        // Tutor example - ask TA about this 
 // function renderImages() {
 //     state.imageSrcs.forEach(function(src, index) {
 //         var imageHtml = `
 //         <img id="snowFlake-${index + 1}" alt="" src="${src}" number=${randomNumber(12, 1)} />`;
 //         $('#snowflake-images').append(imageHtml);
 //     })
-// }console.log("IMAGE RENDERING " + renderImages());
+// }
 
-// variable to generate random number between 1 and 12 (for crystals)
-// var crystals = [Math.floor(Math.random() * 10) + 2];
-    // console.log(crystals);
-
+                // tutor example - adding images dynamically - I didn't understand how to use this in my future code 
 // var state = {
 
 //     imageSrcs : [
@@ -132,5 +130,4 @@ start();
 //     "http://www.snowcrystals.com/designer/IMG_9634-A1.jpg",
 //     "https://media.wnyc.org/i/800/0/c/85/photologue/images/79/snowflake_tout.jpg"
 //     ]
-
 // }
