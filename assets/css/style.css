@@ -35,7 +35,6 @@ header {
     color: white;
     font-weight: 800;
     background: rgba(51, 99, 255, 0.7);
-    /* opacity: 0.4; */
     /* border: 1px solid white; */
     width: 50%;
     margin-top: 2%;
@@ -44,7 +43,7 @@ header {
 
 #number-to-match {
     color: #4e4c4c;
-    text-shadow: 5px 10px 15px white; 
+    /* text-shadow: 5px 10px 15px white;  */
     width: 47%;
     text-align: center;
     /* border: 1px solid orange; */
@@ -52,7 +51,6 @@ header {
     margin-bottom: 3%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.35em;
-    
 }
 
 #wins-losses-score {
@@ -81,22 +79,6 @@ img {
     box-shadow: 5px 10px 18px #4e4c4c;
 }
 
-/* #img-2 {
-    border: 1px solid blue;
-}
-
-#img-3 {
-    border: 1px solid blue;
-}
-
-#img-4 {
-    border: 1px solid blue;
-} */
-
-/* #total-score-heading {
-    border: 1px solid blueviolet;
-} */
-
 #score {
     /* border: 1px solid white; */
     position: absolute;
@@ -113,3 +95,55 @@ button {
     box-shadow: 5px 10px 18px #4e4c4c;
 }
 
+@media only screen and (max-width: 1200px) {
+
+    #game {
+        width: 50%;
+        margin-left: 35%;
+    }
+
+    #number-to-match {
+        width: 60%;
+        font-size: 1em;
+        margin-left: 20%;
+    }
+    
+    #wins-losses-score {
+        font-size: 1.10em;
+    }
+    
+    img {
+        width: 70px;
+        height: 70px;
+    }
+    
+    button {
+        margin-left: 20%;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+
+    body {
+        background-size: inherit;
+    }
+
+    header {
+        font-size: 2.5em;
+    }
+
+    #game {
+        width: 65%;
+        margin-left: 30%;
+    } 
+    
+    img {
+        width: 55px;
+        height: 55px;
+        margin-left: 10%;
+    }
+
+    button {
+        margin-left: 35%;
+    }
+}
