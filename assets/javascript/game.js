@@ -56,33 +56,6 @@ function reset () {
             reset();
         }
     } 
-    
-                        // TIMER
-// --------------------------------------------------------------- 
-// timer variables 
-// var number = 60;
-// var intervalId;   
-
-// function runTimer() {
-//     clearInterval(intervalId);
-//     intervalID = setInterval(decrement, 1000);
-// }
-
-// function decrement() {
-//     number--;
-//     $("#timer").html(number);
-//     if (number === 0) {
-//         stop();
-//         alert("TIME IS UP");
-//     }
-// }
-
-// function stop () {
-//     clearInterval(intervalID);
-// }
-                        // end timer 
-// ------------------------------------------------------------
-
 
     function start () {
         wins = 0;
@@ -95,21 +68,12 @@ function reset () {
 
     $(document).ready(function(){
 
-        // starts timer on snowflake click - has bug 
-    // $("#snowflake-images").click(function() {
-    //     runTimer();
-    //     console.log(runTimer());
-    // });
-
-
-// Initiates game on any snowflake click and chooses random number to match
-// start();
+// Initiates game on any snowflake click
     $('#snowflake-1').click(function() {
         // console.log("SF ONE ON CLICK " + snowflake1);
         score += snowflake1;
         $("#score").html("Total Snowflakes Collected: " + score);
         gameCheck();
-        // $(snowflake1).prepend(score);
     });
 
     $('#snowflake-2').click(function() {
@@ -137,14 +101,7 @@ function reset () {
 
 });
 
-                        // To Do
-// add demo video 
-// try to fix image at responsive sizes 
-// add or remove timer
-// change instructions after time is added 
-// Make it snow 
-
-                        // Tutor example - ask TA about this 
+                    // Tutor example - ask TA about this 
 // function renderImages() {
 //     state.imageSrcs.forEach(function(src, index) {
 //         var imageHtml = `
@@ -162,4 +119,10 @@ function reset () {
 //     "http://www.snowcrystals.com/designer/IMG_9634-A1.jpg",
 //     "https://media.wnyc.org/i/800/0/c/85/photologue/images/79/snowflake_tout.jpg"
 //     ]
-// }
+// }  
+
+                                    // To Do
+// -----------------------------------------------------------------------------------------------------------                                    
+// make my own demo video and add 
+// try to fix image at responsive sizes 
+// Make it snow 
