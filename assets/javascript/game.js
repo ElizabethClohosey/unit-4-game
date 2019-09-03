@@ -1,5 +1,4 @@
 
-
 // ------------------GLOBAL VARIABLES----------------------
 // snowflake variables 
 var snowflake1 = randomNumber(12, 1);
@@ -20,8 +19,6 @@ var numberToMatch;
 // variable to generate random number between 18 and 120 for Total Snowflakes To Collect 
 var cpuChoice = Math.floor(Math.random() * 120) + 1;
     console.log("CPU CHOICE " + cpuChoice);
-
- 
 
 // variable to generate random number between 1 and 12 for Total Snowflakes Collected 
 function randomNumber(range, bound) {
@@ -141,10 +138,9 @@ function reset () {
 });
 
                         // To Do
-// shorten code 
-// make responsive on smaller screen 
-// make object for snowflake 1-4 variables 
-// add timer 
+// add demo video 
+// try to fix image at responsive sizes 
+// add or remove timer
 // change instructions after time is added 
 // Make it snow 
 
