@@ -124,5 +124,5 @@ function reset () {
                                     // To Do
 // -----------------------------------------------------------------------------------------------------------                                    
 // make my own demo video and add 
-// try to fix image at responsive sizes 
+// work on responsiveness ( fix image issues - try bootstrap )
 // Make it snow 
